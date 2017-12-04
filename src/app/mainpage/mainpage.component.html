@@ -1,0 +1,30 @@
+<h2><span class="label label-danger">Customer's List</span></h2>
+<br>
+<div class="container">
+              
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Customer Name</th>
+          <th>Id </th>
+          <th>Phone</th>
+          <th>Current Outstanding</th>
+          <th>Total Billed</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let payinfo of details" 
+        (click)="onSelection(payinfo)" [routerLink]="['/customer/'+payinfo.customerId]"
+        >
+          <td>{{payinfo.customerName}}</td>
+          <td>{{payinfo.customerId}}</td>
+          <td>{{payinfo.phone}}</td>
+          <td>{{payinfo.currentOutstanding}}</td>
+            <td>{{payinfo.totalBilled}}</td>
+    </tr>
+      </tbody>
+    </table>
+  </div>
+
+  
+  <!-- <app-customer-detail [customerId]="selectCustomer?.customerId"></app-customer-detail> -->

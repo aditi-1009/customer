@@ -1,0 +1,15 @@
+
+
+
+<ul class="customer">
+  <li *ngFor="let custinfo of info"
+  [class.selected]="custinfo === selectedCustomer"
+  (click)="onSelect(custinfo)">
+    <span class="badge" >{{custinfo.customerName}}</span>{{custinfo.type}}
+    
+  </li>
+</ul>
+
+
+
+<app-search></app-search>

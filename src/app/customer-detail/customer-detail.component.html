@@ -1,0 +1,42 @@
+
+  
+<div class="container">
+<h2><span class="label label-warning">Transaction Details</span></h2><br>
+
+    <table class="table table-striped" >
+        <thead>
+      
+    <tr>
+      
+      <th>Customer Name</th>
+      <th>Id </th>
+      <th>Type</th>
+      <th>Settled Amount</th>
+      <th>Amount</th>
+      <th>Mode of payment</th>
+    </tr>
+  </thead>
+  
+  <tbody >
+        <tr class="success" *ngIf='detail?.type=="Invoice"'>        
+          <td>{{detail?.customer_name}}</td>
+          <td>{{detail?.id}}</td>
+          <td>{{detail?.type}}</td>
+          <td>{{detail?.settled_amount}}</td>
+          <td>{{detail?.amount}}</td>
+          <td>{{detail?.mode}}</td>
+      </tr>
+
+       <tr  class="danger" *ngIf='detail?.type=="Payment"'>        
+        <td>{{detail?.customer_name}}</td>
+        <td>{{detail?.id}}</td>
+        <td>{{detail?.type}}</td>
+        <td>{{detail?.settled_amount}}</td>
+        <td>{{detail?.amount}}</td>
+        <td>{{detail?.mode}}</td>
+      </tr> 
+  </tbody>
+      </table>
+    </div>
+
+    

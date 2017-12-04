@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+//mport {CustomerService} from './customer.service';
+//import {paymentDetails} from './payment-details';
+import {AppRoutingModule} from './app-routing/app-routing.module';
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +10,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  //title = 'app';
+
+  
 }
