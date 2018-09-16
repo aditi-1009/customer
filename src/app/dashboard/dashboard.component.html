@@ -1,61 +1,56 @@
+<form class="form-horizontal">
+  <div class="form-group">
+    <label for="inputname" class="col-sm-2 control-label">Customer Name</label>
+    <div class="col-sm-4">
+      <input [(ngModel)]="customerinfo.customer_name" name="customer-name" class="form-control"  placeholder="Customer name">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputType" class="col-sm-2 control-label">Type</label>
+    <div class="col-sm-4">
+      <select class="form-control" id="inputType" 
+      required
+      [(ngModel)]="customerinfo.type" name="type"
+      #mode="ngModel">
+<option *ngFor="let pay  of Type;  let i=index"  [value]='pay.name'>{{i+1}}:{{pay.name}}</option>
+</select>
+    </div>
+  </div>
+  <div class="form-group">
+    
+     <label for="inputSettledAmount" class="col-sm-2 control-label">Settled Amount</label>
+     <div class="col-sm-4">
+    <input [(ngModel)]="customerinfo.settled_amount" name="settled-amount" class="form-control" placeholder="enter settled amount" required #name="ngModel"> 
+    </div>
+  </div>
 
+  <div class="form-group">
+    
+    <label for="inputAmount" class="col-sm-2 control-label">Amount</label>
+    <div class="col-sm-4">
+  <input [(ngModel)]="customerinfo.amount" name="amount" class="form-control" placeholder="enter amount" required #name="ngModel"> 
+    </div>
+  </div>
 
-<div class="container-fluid">
-    <div class="row">
-<div class="col-sm-3 col-md-6 col-lg-4">
-<label><h4><span class="label label-primary">Customer Name</span></h4></label><br>
-<input [(ngModel)]="customerinfo.customer_name" placeholder="enter name" required #name="ngModel">
-
-
-</div></div>
-<br>
-
-<div class="form-group">
-    <div class="row">
-    <div class="col-sm-3 col-md-6 col-lg-4">
-    <label for="Type"><h4><span class="label label-primary">Type</span></h4></label>
-    <select class="form-control" id="Type"
-            required
-            [(ngModel)]="customerinfo.type" name="type"
-            #mode="ngModel">
-      <option *ngFor="let pay  of Type;  let i=index"  [value]='pay.name'>{{i+1}}:{{pay.name}}</option>
+  <div class="form-group">
+    <label for="inputMode" class="col-sm-2 control-label">Mode</label>
+    <div class="col-sm-4">
+      <select class="form-control" id="inputMode" 
+      required
+      [(ngModel)]="customerinfo.mode" name="mode"
+      #mode="ngModel">
+      <option *ngFor="let mop of modeofPayment; let i=index" [value]='mop.name'>{{i+1}}:{{mop.name}}</option>
     </select>
     </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" (click)="submit()" class="btn active" data-toggle="modal" data-target="#myModal">Submit</button>
     </div>
-  </div><br>
+  </div>
+  </form>
 
-<div class="row">
-  <div class="col-sm-3 col-md-6 col-lg-4">
-<label><h4><span class="label label-primary">Settled Amount</span></h4></label><br>
-<input [(ngModel)]="customerinfo.settled_amount" placeholder="enter settled amount" required="settled amount required"></div></div>
-<br>
-
-<div class="row">
-<div class="col-sm-3 col-md-6 col-lg-4">
-
-<label><h4><span class="label label-primary">Amount</span></h4></label><br>
-<input [(ngModel)]="customerinfo.amount" placeholder="enter amount" required="amount required"></div></div><br>
-
-<div class="form-group">
-    <div class="row">
-    <div class="col-sm-3 col-md-6 col-lg-4">
-  <label for="modeofPayment"><h4><span class="label label-primary">Mode of Payment</span></h4></label>
-  <select class="form-control" id="mode"
-          required
-          [(ngModel)]="customerinfo.mode" name="mode"
-          #mode="ngModel">
-    <option *ngFor="let mop of modeofPayment; let i=index" [value]='mop.name'>{{i+1}}:{{mop.name}}</option>
-  </select>
-    </div>
-    </div>
-</div><br>
-
-<div class="row">
-    <div class="col-sm-3 col-md-6 col-lg-4">
-<button (click)="submit()" class="btn active" data-toggle="modal" data-target="#myModal">Submit</button></div></div>
-
-
-  <!-- Modal -->
   <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
     
@@ -73,9 +68,15 @@
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
-      
-    </div>
-  </div>
+
+
+
+
+
+
+
+
+
 
 
 

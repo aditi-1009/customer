@@ -5,6 +5,7 @@ import {CustomerPaymentComponent} from '../customer-payment/customer-payment.com
 import {DashboardComponent} from '../dashboard/dashboard.component';
 import { CustomerDetailComponent } from '../customer-detail/customer-detail.component';
 import {MainpageComponent} from '../mainpage/mainpage.component';
+import { MainComponent } from '../main/main.component';
 
 const routes:Routes=[
   {path:'',redirectTo:'/customer-payment',pathMatch:'full'},
@@ -13,7 +14,9 @@ const routes:Routes=[
   {path:'dashboard',component:DashboardComponent},
   { path:'customer-payment',component:CustomerPaymentComponent},
   {path:'',redirectTo:'/customer-detail',pathMatch:'full'},
-  { path:'customer/:id', component:CustomerDetailComponent}
+  { path:'customer/:id', component:CustomerDetailComponent},
+  { path:'main', component:MainComponent}
+
 ]
 
 

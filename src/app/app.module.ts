@@ -17,6 +17,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import {CustomerService} from './customer.service';
 import {Http, HttpModule} from '@angular/http';
+import { MainComponent } from './main/main.component';
+import { AutogridComponent } from './autogrid/autogrid.component';
+import { SortingPipe } from './sorting.pipe';
 //import { MessageComponent } from './message/message.component'
 
 @NgModule({
@@ -26,7 +29,10 @@ import {Http, HttpModule} from '@angular/http';
     SearchComponent,
     CustomerPaymentComponent,
     CustomerDetailComponent,
-    MainpageComponent
+    MainpageComponent,
+    MainComponent,
+    AutogridComponent,
+    SortingPipe
    ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA],
   imports: [
